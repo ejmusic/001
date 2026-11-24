@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Park Hyejin — 2026 Visual Design Portfolio</title>
+  <meta name="description" content="브랜드와 이미지에 이야기를 더해, 기억에 남는 시각적 경험을 만드는 디자이너 박혜진의 2026 디자인 포트폴리오입니다." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+KR:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <link rel="stylesheet" href="styles.css?v=8" />
+</head>
+<body>
+  <!-- Custom Cursor Glow -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-dot"></span>
+        <span>PARK HYEJIN</span>
+      </a>
+      <nav class="nav-links" aria-label="주 메뉴">
+        <a href="#story">Story</a>
+        <a href="#work-01">청해기록</a>
+        <a href="#work-02">AERINDEW</a>
+        <a href="#work-03">TEAZ</a>
+        <a href="#profile">Profile</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#story" class="mobile-link">Story</a>
+    <a href="#work-01" class="mobile-link">01 · 청해기록</a>
+    <a href="#work-02" class="mobile-link">02 · AERINDEW</a>
+    <a href="#work-03" class="mobile-link">03 · TEAZ</a>
+    <a href="#profile" class="mobile-link">Profile</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <!-- =========================================================
+       HERO: 청해기록 심해 판타지 랜딩
+       ========================================================= -->
+  <section class="hero" id="hero">
+    <!-- Background Image with Parallax (Poster-Matched Selective Color Grade) -->
+    <div class="hero-bg-wrap" id="heroBgWrap">
+      <img
+        src="assets/layers/bg-library-graded.jpg?v=33"
+        alt="바닷속 도서관 배경"
+        class="hero-bg-img"
+      />
+    </div>
+
+    <!-- Subtle Atmospheric Vignette -->
+    <div class="hero-vignette" aria-hidden="true"></div>
+
+    <!-- 2.5D Back Stage Canvas (Back Fan Rays, Distant Books & Bubbles) -->
+    <canvas class="hero-canvas hero-canvas-back" id="abyssBackCanvas" aria-hidden="true"></canvas>
+
+    <!-- True 3D Starry Whale WebGL Stage (Three.js GLB + Swimming Shader) -->
+    <canvas class="hero-canvas hero-canvas-3d" id="whale3dCanvas" aria-hidden="true"></canvas>
+
+    <!-- 2.5D Front Stage Canvas (Head-Tracking Girl, Ripples, Front Fan Rays & Bubbles) -->
+    <canvas class="hero-canvas hero-canvas-front" id="abyssFrontCanvas" aria-hidden="true"></canvas>
+
+    <!-- Vertical Signature Text (Right) -->
+    <div class="hero-vertical" aria-hidden="true">
+      <span class="vertical-hanja">靑海記錄</span>
+      <span class="vertical-line"></span>
+      <span class="vertical-sub">DEEP SEA ARCHIVE · 2026</span>
+    </div>
+
+    <!-- Main Hero Content -->
+    <div class="hero-content">
+      <div class="hero-badge fade-in-up" style="--delay: 0.1s">
+        <span class="badge-pulse"></span>
+        <span>2026 VISUAL DESIGN PORTFOLIO</span>
+      </div>
+
+      <h1 class="hero-title fade-in-up" style="--delay: 0.25s">
+        <span class="title-en">Park Hyejin</span>
+        <span class="title-kr">심연의 빛으로 이야기를 건네다</span>
+      </h1>
+
+      <p class="hero-desc fade-in-up" style="--delay: 0.4s">
+        어둑한 심연 속 책들이 은은한 파동으로 서로를 부르는 순간처럼,<br class="br-desktop" />
+        브랜드와 이미지에 이야기를 더해 기억에 남는 시각적 경험을 만듭니다.
+      </p>
+
+      <div class="hero-actions fade-in-up" style="--delay: 0.55s">
+        <a href="#story" class="btn-fantasy">
+          <span>포트폴리오 여정 시작하기</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M12 5v14M5 12l7 7 7-7" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+        <a href="#work-01" class="btn-ghost">
+          <span>작품 바로 보기</span>
+        </a>
+      </div>
+
+      <div class="hero-meta fade-in-up" style="--delay: 0.7s">
+        <span>POSTER</span>
+        <span class="meta-sep">·</span>
+        <span>BRANDING</span>
+        <span class="meta-sep">·</span>
+        <span>PACKAGE</span>
+        <span class="meta-sep">·</span>
+        <span>APP UI/UX</span>
+      </div>
+    </div>
+
+    <!-- Interactive Hint & Underwater Sound Toggle -->
+    <div class="hero-bottom-controls fade-in-up" style="--delay: 0.9s">
+      <button type="button" class="hero-sound-btn is-active" id="heroSoundBtn" aria-pressed="true" aria-label="수중 사운드 켜기/끄기">
+        <span class="sound-bars" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </span>
+        <span class="sound-label" id="heroSoundLabel">수중 사운드 ON</span>
+      </button>
+      <div class="hero-interact-hint" aria-hidden="true">
+        <span class="hint-spark">✦</span>
+        <span>원하는 곳을 클릭하면 소나 파동과 함께 고래가 유영합니다</span>
+      </div>
+    </div>
+
+    <!-- Scroll Cue -->
+    <a href="#story" class="scroll-cue" aria-label="아래로 스크롤">
+      <span class="scroll-text">SCROLL TO DIVE</span>
+      <span class="scroll-line"></span>
+    </a>
+  </section>
+
+  <!-- =========================================================
+       STORY & SELECTED WORKS INDEX
+       ========================================================= -->
+  <section class="story-section" id="story">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-letter reveal">
+          <span class="eyebrow">INVITE YOU TO MY STORY</span>
+          <h2 class="section-heading">
+            디자인은 저에게<br />
+            <em>하나의 설레는 편지</em>와 같습니다.
+          </h2>
+          <p class="story-quote">
+            “이 편지가 닿는 곳마다 따뜻하고 정확하게 제 디자인이 전달되길 바라는 마음입니다.”
+          </p>
+          <p class="story-en">Design that delivers stories like a letter.</p>
+        </div>
+
+        <div class="works-index reveal" style="--reveal-delay: 0.15s">
+          <div class="index-header">
+            <span class="eyebrow">CONTENTS · SELECTED WORKS</span>
+            <span class="index-year">2025 — 2026</span>
+          </div>
+
+          <a href="#work-01" class="index-card">
+            <span class="index-num">01</span>
+            <div class="index-info">
+              <h3>청해기록 <span class="index-sub-en">CHEONGHAE RECORD</span></h3>
+              <p>심연 속에서 펼쳐지는 판타지 · POSTER DESIGN</p>
+            </div>
+            <span class="index-arrow">→</span>
+          </a>
+
+          <a href="#work-02" class="index-card">
+            <span class="index-num">02</span>
+            <div class="index-info">
+              <h3>AERINDEW <span class="index-sub-en">SKINCARE</span></h3>
+              <p>자연의 편안함을 담은 스킨케어 브랜드 · BRANDING · PACKAGE</p>
+            </div>
+            <span class="index-arrow">→</span>
+          </a>
+
+          <a href="#work-03" class="index-card">
+            <span class="index-num">03</span>
+            <div class="index-info">
+              <h3>TEAZ <span class="index-sub-en">MOOD TEA</span></h3>
+              <p>오늘의 기분으로 선택하는 티 브랜드 · BRANDING · PACKAGE · APP</p>
+            </div>
+            <span class="index-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       PROJECT 01: 청해기록 (CHEONGHAE RECORD)
+       ========================================================= -->
+  <section class="project-section project-cheonghae" id="work-01">
+    <div class="container">
+      <div class="project-header reveal">
+        <div class="project-tag-row">
+          <span class="project-num">01</span>
+          <span class="project-cat">POSTER DESIGN</span>
+        </div>
+        <h2 class="project-title">
+          청해기록 <span class="title-serif-sub">CHEONGHAE RECORD</span>
+        </h2>
+        <p class="project-lead">
+          어둑한 심연 속, 책들이 은은한 파동으로 서로를 부르는 순간을 표현한 판타지 지류 포스터입니다.
+          빛줄기가 내려앉는 해저 도서관과 별빛을 머금은 고래, 그리고 그 경이를 마주한 소녀의 시선을 하나의 서사로 엮어냈습니다.
+        </p>
+
+        <div class="meta-bar">
+          <div class="meta-item">
+            <span class="meta-label">SCOPE</span>
+            <span class="meta-value">Personal Project</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">DATE</span>
+            <span class="meta-value">2025.05 — 06</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">USED TOOL</span>
+            <span class="meta-value">Adobe Photoshop</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="cheonghae-showcase">
+        <figure class="media-card poster-main reveal" data-lightbox="assets/images/cheonghae-poster.jpg" data-caption="청해기록 (靑海記錄) — 메인 판타지 지류 포스터">
+          <img src="assets/images/cheonghae-poster.jpg" alt="청해기록 최종 포스터" loading="lazy" />
+          <figcaption>
+            <span>Main Poster Artwork</span>
+            <span class="zoom-hint">클릭하여 확대 ↗</span>
+          </figcaption>
+        </figure>
+
+        <div class="cheonghae-side">
+          <figure class="media-card reveal" style="--reveal-delay: 0.1s" data-lightbox="assets/images/cheonghae-detail.jpg" data-caption="청해기록 — 지류 인쇄 질감 및 타이포그래피 디테일">
+            <img src="assets/images/cheonghae-detail.jpg" alt="청해기록 지류 포스터 디테일" loading="lazy" />
+            <figcaption>
+              <span>Paper Texture & Typography Detail</span>
+              <span class="zoom-hint">확대 ↗</span>
+            </figcaption>
+          </figure>
+
+          <figure class="media-card reveal" style="--reveal-delay: 0.2s" data-lightbox="assets/images/cheonghae-mockup.jpg" data-caption="청해기록 — 윈도우 전시 공간 목업">
+            <img src="assets/images/cheonghae-mockup.jpg" alt="청해기록 쇼윈도 전시 목업" loading="lazy" />
+            <figcaption>
+              <span>Window Display Mockup</span>
+              <span class="zoom-hint">확대 ↗</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       PROJECT 02: AERINDEW
+       ========================================================= -->
+  <section class="project-section project-aerindew" id="work-02">
+    <div class="container">
+      <div class="project-header reveal">
+        <div class="project-tag-row">
+          <span class="project-num">02</span>
+          <span class="project-cat">BRANDING · PACKAGE DESIGN</span>
+        </div>
+        <h2 class="project-title aerindew-title">
+          AERINDEW <span class="title-serif-sub">Pure Hydration for a Calmer, Brighter You.</span>
+        </h2>
+        <p class="project-lead">
+          AERINDEW는 바람처럼 가벼운 편안함(AIR)과 이슬처럼 맑은 수분(DEW)의 조화를 담은 데일리 스킨케어 브랜드입니다.
+          피부가 가장 편안한 균형을 찾을 수 있도록 수분·진정·장벽 케어 중심으로 제품을 구성하고, 부드러운 컬러와 절제된 그래픽으로 맑고 프리미엄한 아이덴티티를 표현했습니다.
+        </p>
+
+        <div class="meta-bar">
+          <div class="meta-item">
+            <span class="meta-label">SCOPE</span>
+            <span class="meta-value">Personal Project</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">DATE</span>
+            <span class="meta-value">2026.08 — 09</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">USED TOOL</span>
+            <span class="meta-value">Adobe Photoshop, ChatGPT(AI)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual -->
+      <figure class="media-card wide-visual reveal" data-lightbox="assets/images/aerindew-hero.jpg" data-caption="AERINDEW — Calming Essence Toner 키 비주얼">
+        <img src="assets/images/aerindew-hero.jpg" alt="AERINDEW 이끼 숲 속 카밍 에센스 토너" loading="lazy" />
+        <figcaption>
+          <span>Key Visual — Calming Essence Toner (150mL)</span>
+          <span class="zoom-hint">확대 ↗</span>
+        </figcaption>
+      </figure>
+
+      <!-- Brand System: Logo, Color, Typography -->
+      <div class="brand-system-grid reveal">
+        <div class="system-card logo-card">
+          <span class="system-label">LOGO SYSTEM</span>
+          <div class="logo-preview">
+            <img src="assets/images/aerindew-logo.jpg" alt="AERINDEW 심볼, 워드마크, 배리에이션 로고" loading="lazy" />
+          </div>
+          <p class="system-note">나뭇잎과 이슬을 모티프로 한 섬세한 라인 심볼과 세리프 워드마크 조화 — <em>Beauty Lives in Balance</em></p>
+        </div>
+
+        <div class="system-card color-card">
+          <span class="system-label">COLOR PALETTE <small>(클릭하여 HEX 복사)</small></span>
+          <div class="swatch-list">
+            <button type="button" class="swatch" data-hex="#AAB6A1" style="--swatch: #AAB6A1">
+              <span class="swatch-name">SAGE</span>
+              <span class="swatch-hex">#AAB6A1</span>
+            </button>
+            <button type="button" class="swatch swatch-light" data-hex="#EAE4DC" style="--swatch: #EAE4DC">
+              <span class="swatch-name">IVORY</span>
+              <span class="swatch-hex">#EAE4DC</span>
+            </button>
+            <button type="button" class="swatch swatch-light" data-hex="#D9C7C4" style="--swatch: #D9C7C4">
+              <span class="swatch-name">BLUSH</span>
+              <span class="swatch-hex">#D9C7C4</span>
+            </button>
+            <button type="button" class="swatch swatch-light" data-hex="#C8C8CC" style="--swatch: #C8C8CC">
+              <span class="swatch-name">SILVER BLUE</span>
+              <span class="swatch-hex">#C8C8CC</span>
+            </button>
+          </div>
+          <div class="typo-box">
+            <div>
+              <span class="typo-role">MAIN TYPE</span>
+              <strong class="typo-serif">Bodoni Seventytwo ITC Pro</strong>
+            </div>
+            <div>
+              <span class="typo-role">SUB TYPE</span>
+              <strong class="typo-sans">Source Sans Variable</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Gallery -->
+      <div class="aerindew-gallery">
+        <figure class="media-card reveal" data-lightbox="assets/images/aerindew-lineup.jpg" data-caption="AERINDEW — 4종 스킨케어 용기 및 단상자 패키지 라인업">
+          <img src="assets/images/aerindew-lineup.jpg" alt="AERINDEW 전 제품 및 단상자 패키지" loading="lazy" />
+          <figcaption>
+            <span>Full Lineup — Cleanser · Toner · Serum · Cream</span>
+            <span class="zoom-hint">확대 ↗</span>
+          </figcaption>
+        </figure>
+
+        <figure class="media-card reveal" style="--reveal-delay: 0.1s" data-lightbox="assets/images/aerindew-water.jpg" data-caption="AERINDEW — 수분과 균형을 표현한 워터 리플 화보">
+          <img src="assets/images/aerindew-water.jpg" alt="AERINDEW 물결 위 에센스 토너" loading="lazy" />
+          <figcaption>
+            <span>Moisture & Calmness Editorial</span>
+            <span class="zoom-hint">확대 ↗</span>
+          </figcaption>
+        </figure>
+
+        <figure class="media-card reveal" style="--reveal-delay: 0.2s" data-lightbox="assets/images/aerindew-cream.jpg" data-caption="AERINDEW — Barrier Replenish Cream 텍스처 클로즈업">
+          <img src="assets/images/aerindew-cream.jpg" alt="AERINDEW 배리어 리플레니시 크림" loading="lazy" />
+          <figcaption>
+            <span>Barrier Replenish Cream (50g)</span>
+            <span class="zoom-hint">확대 ↗</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       PROJECT 03: TEAZ
+       ========================================================= -->
+  <section class="project-section project-teaz" id="work-03">
+    <div class="container">
+      <div class="project-header reveal">
+        <div class="project-tag-row">
+          <span class="project-num">03</span>
+          <span class="project-cat">BRANDING · PACKAGE · APP DESIGN</span>
+        </div>
+        <h2 class="project-title teaz-title">
+          TEAZ <span class="title-sans-sub">Pick your mood, sip your tea.</span>
+        </h2>
+        <p class="project-lead">
+          TEAZ는 20대의 다양한 라이프스타일과 감정에 맞춰 차를 선택할 수 있도록 기획한 무드 기반 티 브랜드입니다.
+          기존 차 브랜드의 차분하고 전통적인 이미지를 벗어나 강렬한 네온 컬러와 볼드한 타이포그래피로 젊고 에너지 있는 브랜드 경험을 패키지부터 모바일 앱까지 확장했습니다.
+        </p>
+      </div>
+
+      <!-- TEAZ Hero Visual -->
+      <figure class="media-card wide-visual reveal" data-lightbox="assets/images/teaz-hero.jpg" data-caption="TEAZ — 4가지 무드 캔 패키지 키 비주얼">
+        <img src="assets/images/teaz-hero.jpg" alt="TEAZ 4종 캔 패키지 메인 비주얼" loading="lazy" />
+        <figcaption>
+          <span>Good Mood Brews — 4 Signature Cans (330mL)</span>
+          <span class="zoom-hint">확대 ↗</span>
+        </figcaption>
+      </figure>
+
+      <!-- Interactive Mood Selector -->
+      <div class="teaz-mood-box reveal" id="teazMoodBox" data-mood="wake">
+        <div class="mood-top">
+          <div>
+            <span class="system-label">INTERACTIVE MOOD LINEUP</span>
+            <h3>오늘, 어떤 나를 만날까요?</h3>
+          </div>
+          <div class="mood-pills" role="tablist" aria-label="TEAZ 무드 선택">
+            <button type="button" class="mood-pill active" data-mood="wake" role="tab" aria-selected="true">WAKE · ENERGISE</button>
+            <button type="button" class="mood-pill" data-mood="focus" role="tab" aria-selected="false">FOCUS · CLARITY</button>
+            <button type="button" class="mood-pill" data-mood="boost" role="tab" aria-selected="false">BOOST · GOOD VIBES</button>
+            <button type="button" class="mood-pill" data-mood="chill" role="tab" aria-selected="false">CHILL · RELAX</button>
+          </div>
+        </div>
+        <div class="mood-display">
+          <div class="mood-badge-dot" id="moodDot"></div>
+          <div class="mood-copy">
+            <h4 id="moodTitle">WAKE / ENERGISE — Green Tea + Lime</h4>
+            <p id="moodDesc">활기찬 에너지가 필요할 때. 상쾌한 그린티와 톡 쏘는 라임이 어우러져 가볍고 선명한 하루의 시작을 열어줍니다.</p>
+          </div>
+          <div class="mood-tags" id="moodTags">
+            <span>#에너지부스트</span>
+            <span>#상쾌한맛</span>
+            <span>#비타민가득</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Editorial & Lifestyle -->
+      <div class="teaz-grid-2">
+        <figure class="media-card reveal" data-lightbox="assets/images/teaz-story.jpg" data-caption="TEAZ — 스트릿 라이프스타일 브랜드 화보">
+          <img src="assets/images/teaz-story.jpg" alt="TEAZ 라이프스타일 화보" loading="lazy" />
+          <figcaption>
+            <span>Brand Story — Real Moods, Bolder Days</span>
+            <span class="zoom-hint">확대 ↗</span>
+          </figcaption>
+        </figure>
+
+        <figure class="media-card reveal" style="--reveal-delay: 0.12s" data-lightbox="assets/images/teaz-active.jpg" data-caption="TEAZ — 액티브 라이프스타일 & 굿즈(타월·키링·텀블러)">
+          <img src="assets/images/teaz-active.jpg" alt="TEAZ 액티브 굿즈 및 캔 목업" loading="lazy" />
+          <figcaption>
+            <span>Active Lifestyle & Brand Goods</span>
+            <span class="zoom-hint">확대 ↗</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- App UI/UX Section -->
+      <div class="teaz-app-block reveal">
+        <div class="app-intro">
+          <span class="eyebrow">APP UI/UX DESIGN</span>
+          <h3>A BRIGHTER YOU, EVERYDAY.</h3>
+          <p>
+            사용자의 현재 기분과 필요를 바탕으로 가장 잘 어울리는 티를 추천하는 모바일 서비스입니다.
+            간단한 무드 선택과 4단계 질문을 통해 상태를 확인하고, 제품 탐색·상세 정보·구매·무드 기록까지 하나의 자연스러운 흐름으로 연결했습니다.
+          </p>
+        </div>
+
+        <div class="teaz-grid-2">
+          <figure class="media-card" data-lightbox="assets/images/teaz-app-1.jpg" data-caption="TEAZ App — 온보딩 메인 스크린">
+            <img src="assets/images/teaz-app-1.jpg" alt="TEAZ 앱 온보딩 화면" loading="lazy" />
+            <figcaption>
+              <span>Onboarding Experience</span>
+              <span class="zoom-hint">확대 ↗</span>
+            </figcaption>
+          </figure>
+
+          <figure class="media-card" data-lightbox="assets/images/teaz-app-2.jpg" data-caption="TEAZ App — 무드 선택 · 설문 · 추천 · 상세 구매 플로우">
+            <img src="assets/images/teaz-app-2.jpg" alt="TEAZ 앱 전체 화면 플로우" loading="lazy" />
+            <figcaption>
+              <span>Mood Quiz → Recommendation → Commerce Flow</span>
+              <span class="zoom-hint">확대 ↗</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       PROFILE: FROM PARK HYEJIN
+       ========================================================= -->
+  <section class="profile-section" id="profile">
+    <div class="container">
+      <div class="profile-wrapper reveal">
+        <div class="profile-left">
+          <div class="profile-photo-frame">
+            <img src="assets/images/profile.jpg" alt="박혜진 디자이너 프로필 사진" loading="lazy" />
+          </div>
+          <div class="profile-name-block">
+            <span class="from-script">From</span>
+            <h2>Park Hyejin</h2>
+            <p class="name-kr">박혜진 · 2005.07.13</p>
+            <p class="bio-text">
+              브랜드와 이미지에 이야기를 더해,<br />
+              기억에 남는 시각적 경험을 만드는 디자이너입니다.
+            </p>
+          </div>
+        </div>
+
+        <div class="profile-right">
+          <div class="resume-group">
+            <h3>EDUCATION</h3>
+            <p>정화예술대학교 시각디자인 전공 <span class="status-pill">재학</span></p>
+          </div>
+
+          <div class="resume-group">
+            <h3>AWARDS</h3>
+            <ul class="resume-list">
+              <li>제16회 대한민국 호국미술대전 <strong>우수상(육군참모총장상)</strong> 수상</li>
+              <li>2026 블루어워즈 상품문화디자인 국제 공모전 <strong>입선</strong> 수상</li>
+            </ul>
+          </div>
+
+          <div class="resume-group">
+            <h3>LICENSE</h3>
+            <ul class="resume-list">
+              <li>정보기술자격(ITQ) 아래한글, 한글엑셀, 한글파워포인트</li>
+              <li>GTQ 그래픽기술자격 2급</li>
+            </ul>
+          </div>
+
+          <div class="resume-split">
+            <div class="resume-group">
+              <h3>TOOLS</h3>
+              <div class="pill-group">
+                <span class="pill-solid">PHOTOSHOP</span>
+                <span class="pill-solid">ILLUSTRATOR</span>
+                <span class="pill-solid">INDESIGN</span>
+              </div>
+            </div>
+
+            <div class="resume-group">
+              <h3>SKILLS</h3>
+              <div class="pill-group">
+                <span class="pill-outline">POSTER</span>
+                <span class="pill-outline">BRANDING</span>
+                <span class="pill-outline">PACKAGE</span>
+                <span class="pill-outline">APP</span>
+                <span class="pill-outline">PHOTOGRAPHY</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FOOTER / CONTACT
+       ========================================================= -->
+  <footer class="footer-section" id="contact">
+    <div class="container">
+      <div class="footer-inner reveal">
+        <span class="eyebrow">TO MAKE TOGETHER FOR WORK</span>
+        <h2 class="footer-title">Thank you for Viewing</h2>
+        <p class="footer-sub">함께 이야기를 만들어갈 새로운 프로젝트와 협업을 기다립니다.</p>
+
+        <div class="contact-actions">
+          <a href="mailto:phj-0713@naver.com" class="btn-fantasy">
+            <span>phj-0713@naver.com</span>
+          </a>
+          <button type="button" class="btn-ghost" id="copyEmailBtn" data-email="phj-0713@naver.com">
+            <span>이메일 주소 복사</span>
+          </button>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2026 Park Hyejin. All rights reserved.</span>
+          <a href="#hero" class="back-top">Back to Top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="이미지 확대 보기">
+    <button type="button" class="lightbox-close" id="lightboxClose" aria-label="닫기">×</button>
+    <div class="lightbox-body">
+      <img src="" alt="" id="lightboxImg" />
+      <p id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/vendor/three/three-gltf.bundle.js?v=38"></script>
+  <script src="assets/layers/whale-data.js?v=38"></script>
+  <script src="script.js?v=38"></script>
+  <script src="whale3d.js?v=38"></script>
+</body>
+</html>
